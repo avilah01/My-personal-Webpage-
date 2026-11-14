@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Abegail Cabrera, applicant for Junior Programmer at JPCS Inc.">
+  <title>Abegail Cabrera | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header">
+    <a class="logo" href="#personal">AC<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-menu">
+        <li><a href="#personal">Personal Info</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#java">Java Code</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PERSONAL INFORMATION ===== -->
+    <section id="personal" class="hero">
+      <div class="container hero-grid">
+        <img class="profile-pic" src="images/profile.jpg" alt="Photo of Abegail Cabrera"
+             onerror="this.src='https://placehold.co/300x300?text=Your+Photo'">
+        <div>
+          <p class="eyebrow">Junior Programmer Applicant &middot; JPCS Inc.</p>
+          <h1>Abegail Cabrera</h1>
+          <p class="lead">
+            BS Information Technology student at Our Lady of the Sacred Heart College of Guimba, Inc.
+            I enjoy making code programs and clean web pages. I am eager to learn,
+            solve problems, and grow as a developer.
+          </p>
+          <table class="info-table">
+            <tr><th>Full Name</th><td>Abegail Cabrera</td></tr>
+            <tr><th>Age</th><td>18</td></tr>
+            <tr><th>Address</th><td>Narvacan I, Guimba, Nueva Ecija, Philippines</td></tr>
+            <tr><th>Email</th><td><a href="mailto:abegailcabrera33@gmail.com">abegailcabrera33@gmail.com</a></td></tr>
+            <tr><th>Phone</th><td>09369836796</td></tr>
+            <tr><th>GitHub</th><td><a href="https://github.com/avilah01" target="_blank" rel="noopener">https://github.com/avilah01</a></td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATIONAL BACKGROUND ===== -->
+    <section id="education" class="section alt">
+      <div class="container">
+        <h2>Educational Background</h2>
+        <div class="timeline">
+          <article class="card">
+            <span class="year">2026 &ndash; Present</span>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p>Our Lady of the Sacred Heart College of Guimba, Inc.</p>
+            <p class="muted">Guimba, Nueva Ecija</p>
+          </article>
+          <article class="card">
+            <span class="year">2024 &ndash; 2026</span>
+            <h3>Senior High School (Strand: STEM)</h3>
+            <p>Bonifacio Luz Natividad Educational Foundation Inc.</p>
+            <p class="muted">Guimba, Nueva Ecija</p>
+          </article>
+          <article class="card">
+            <span class="year">2020 &ndash; 2024</span>
+            <h3>Junior High School</h3>
+            <p>Bartolome Sangalang National High School</p>
+            <p class="muted">Guimba, Nueva Ecija</p>
+          </article>
+          <article class="card">
+            <span class="year">2014 &ndash; 2020</span>
+            <h3>Elementary</h3>
+            <p>Your Elementary School Name</p>
+            <p class="muted">Narvacan I, Guimba, Nueva Ecija</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <h3 class="sub">Technical Skills</h3>
+        <div class="skill-list">
+          <div class="skill"><span>HTML</span><div class="bar"><div style="width:75%"></div></div></div>
+          <div class="skill"><span>CSS3</span><div class="bar"><div style="width:65%"></div></div></div>
+          <div class="skill"><span>Java</span><div class="bar"><div style="width:85%"></div></div></div>
+          <div class="skill"><span>Git &amp; GitHub</span><div class="bar"><div style="width:65%"></div></div></div>
+        </div>
+
+        <h3 class="sub">Programming Knowledge</h3>
+        <ul class="tags">
+          <li>Variables &amp; Data Types</li>
+          <li>Conditional Statements</li>
+          <li>Loops</li>
+          <li>Arrays</li>
+        </ul>
+
+        <h3 class="sub">Other Skills</h3>
+        <ul class="tags">
+          <li>Problem Solving</li>
+          <li>Teamwork</li>
+          <li>Time Management</li>
+          <li>Communication</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== JAVA CODE ===== -->
+    <section id="java" class="section alt">
+      <div class="container">
+        <h2>Java Code</h2>
+        <p>
+          <strong>CC102 Final Performance Task (PeTa):</strong> Math Challenge. A simple console game: answer 5 random math questions and get a score.
+          <a class="btn" href="Main.java" download>Download Main.java</a>
+        </p>
+
+<pre><code>import java.util.Random;
+import java.util.Scanner;
+
+/**
+ * Math Challenge - CC102 Final Performance Task
+ * A simple console game: answer 5 random math questions and get a score.
+ */
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        int totalQuestions = 5;
+        int score = 0;
+
+        System.out.println("=== MATH CHALLENGE ===");
+        System.out.println("Answer " + totalQuestions + " questions!\n");
+
+        for (int i = 1; i &lt;= totalQuestions; i++) {
+            // Pick two random numbers from 1 to 10
+            int a = random.nextInt(10) + 1;
+            int b = random.nextInt(10) + 1;
+
+            // Pick a random operation: 0 = add, 1 = subtract, 2 = multiply
+            int operation = random.nextInt(3);
+            int correct;
+            String symbol;
+
+            if (operation == 0) {
+                correct = a + b;
+                symbol = "+";
+            } else if (operation == 1) {
+                // Put the bigger number first so the answer is never negative
+                if (a &lt; b) {
+                    int temp = a;
+                    a = b;
+                    b = temp;
+                }
+                correct = a - b;
+                symbol = "-";
+            } else {
+                correct = a * b;
+                symbol = "x";
+            }
+
+            // Ask the question
+            System.out.print("Question " + i + ": " + a + " " + symbol + " " + b + " = ");
+            int answer = input.nextInt();
+
+            // Check the answer
+            if (answer == correct) {
+                System.out.println("Correct!");
+                score++;
+            } else {
+                System.out.println("Wrong! The answer is " + correct);
+            }
+        }
+
+        // Show the final score
+        System.out.println("\nYour score: " + score + " out of " + totalQuestions);
+
+        if (score == totalQuestions) {
+            System.out.println("Perfect! You are a math genius!");
+        } else if (score &gt;= 3) {
+            System.out.println("Good job!");
+        } else {
+            System.out.println("Keep practicing!");
+        }
+
+        input.close();
+    }
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Abegail Cabrera &middot; BSIT, OLSHCO &middot; Built with HTML &amp; CSS</p>
+    <p><a href="#personal">Back to top &uarr;</a></p>
+  </footer>
+
+</body>
+</html>
